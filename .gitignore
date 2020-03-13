@@ -1,0 +1,9 @@
+.DS_Store
+semantic/
+semantic.json
+dist-prod/
+coverage/
+dist/
+/node_modules/
+.idea/
+**/*.iml
