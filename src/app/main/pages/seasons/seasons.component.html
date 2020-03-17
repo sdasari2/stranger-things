@@ -1,0 +1,13 @@
+<app-header></app-header>
+
+<section class="episode-section">
+  <h1 class="title">{{ 'episodes' | translate }}</h1>
+
+  <h3> {{ 'listOfEpisodes' | translate }}
+      <app-select [hasBorder]="false" [defaultValue]="currentSeason" [options]="seasonsList" (changeOption)="onSeasonChange($event)"></app-select>
+  </h3>
+
+  <ng-container *ngFor="let episode of episodesList;">
+    <app-episode-detail [episode]="episode"></app-episode-detail>
+  </ng-container>
+</section>

@@ -1,0 +1,97 @@
+$header-bg: #0e131b;
+
+.app-header {
+  position: fixed;
+  width: 100%;
+  height: 72px;
+  padding: 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 3;
+  background: $header-bg;
+  box-sizing: border-box;
+}
+
+a.header-logo {
+  cursor: pointer;
+
+  img {
+    height: 40px;
+  }
+}
+
+.left-section,
+.right-section {
+  display: flex;align-items: center;
+}
+
+.seasons-btn {
+  color: #d2d2d2;
+  border-radius: 6px;
+  border: 1px solid #a5a5a5;
+  background: transparent;
+  margin-right: 12px;
+
+  &:hover {
+    color: white;
+    border: 1px solid white;
+  }
+}
+
+.mob-side-menu-bars {
+  color: white;
+  margin-right: 24px;
+  font-size: 28px;
+}
+
+.mob-menu-icon {
+  display: none;
+}
+
+.sidenav.sidenav-open {
+  width: 220px;
+}
+
+.sidenav {
+  height: 100%;
+  width: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: fixed;
+  z-index: 5;
+  top: 0;
+  left: 0;
+  background-color: #040b15;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+}
+
+.sidenav .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+  color: #d2d2d2;
+}
+
+.margin-bottom-16 {
+  margin-bottom: 16px;
+}
+
+@media only screen and (max-width: 768px) {
+  .right-section {
+    display: none;
+  }
+
+  .mob-menu-icon {
+    display: block;
+
+    &:hover {
+      cursor: pointer;
+    }
+  }
+}

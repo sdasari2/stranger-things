@@ -1,0 +1,348 @@
+.videoWrapper {
+  position: relative;
+  padding-bottom: 56.25%; /* 16:9 */
+  height: 0;
+}
+.videoWrapper iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.trailer-play-btn {
+  background: white;
+  color: black;
+  display: flex;
+  align-items: center;
+  margin-top: 10%;
+  border-radius: 4px;
+
+  .play-icon {
+    font-size: 42px;
+  }
+
+  .play-text {
+    font-size: 22px;
+    margin-left: 12px;
+    font-weight: 600;
+  }
+}
+
+.gallery-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-item: center;
+}
+
+
+.gallery {
+  width: 49.99999%;
+  padding: 8px;
+  transition: transform .2s;
+
+  img {
+    width: 100%;
+    overflow: hidden;
+    object-fit: cover;
+  }
+
+  .gallery-desc {
+    padding: 15px;
+    text-align: center;
+    color: white;
+  }
+}
+
+section {
+  background: #101926;
+  width: 100%;
+  padding: 25px 5vw;
+  box-sizing: border-box;
+}
+
+
+
+
+div.gallery {
+  // border: 1px solid #ccc;
+}
+
+div.gallery:hover {
+  transform: scale(1.02);
+}
+
+div.gallery img {
+  width: 600px;
+  height: 400px;
+  overflow: hidden;
+  object-fit: cover;
+}
+
+div.desc {
+  padding: 15px;
+  text-align: center;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.responsive {
+  padding: 0 6px;
+  float: left;
+  width: 49.99999%;
+}
+
+.mobile-img {
+  display: none;
+}
+
+@media only screen and (max-width: 980px) {
+  .gallery-container {
+    flex-direction: column;
+  }
+
+  .gallery {
+    width: 100%;
+
+  }
+  .responsive {
+    width: 100%;
+    margin: 6px 0;
+  }
+}
+
+@media only screen and (max-width: 640px) {
+  .hero-container .hero-image-container {
+    display: none;
+  }
+
+  .hero-container .hero-info-container {
+    width: 100%;
+    min-width: 100%;
+  }
+
+  div.gallery img {
+    width: 100%;
+    height: 300px;
+  }
+
+  .mobile-img {
+    display: block;
+    width: calc(100% + 87px);
+    margin-left: -27px;
+    margin-top: -16px;
+  }
+}
+
+.clearfix:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+
+
+
+
+
+
+
+
+
+
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 3; /* Sit on top */
+  padding-top: 24px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
+}
+
+.display-block {
+  display: block;
+}
+
+/* Modal Content */
+.modal-content {
+  position: relative;
+  background-color: #fefefe;
+  margin: auto;
+  padding: 0;
+  width: 80%;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+  -webkit-animation-name: animatetop;
+  -webkit-animation-duration: 0.4s;
+  animation-name: animatetop;
+  animation-duration: 0.4s
+}
+
+/* The Close Button */
+.close {
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.modal-header {
+  display: flex;
+  justify-content: flex-end;
+  padding: 2px 16px;
+}
+
+.modal-body {
+}
+
+.modal-footer {
+  background-color: #5cb85c;
+  color: white;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.top-bottom-border {
+  border-top: 1px solid #606873;
+  border-bottom: 1px solid #606873;
+}
+
+.quote-block {
+  margin-top: 24px;
+  padding: 18px;
+  color: #A3A3A3;
+  display: flex;
+  flex-direction: COLUMN;
+  justify-content: center;
+  align-items: CENTER;
+
+  p {
+    font-size: 18px;
+  }
+
+  .author-name {
+    align-self: flex-end;
+  }
+}
+
+.hero-section {
+  padding: 25px 5vw;
+  padding-top: 72px;
+  background: #101926;
+  max-width: 1600px;
+  margin: 0 auto;
+  position: relative;
+  line-height: 1.4;
+  overflow: hidden;
+
+  .hero-container {
+    position: relative;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: row;
+    -moz-box-orient: horizontal;
+    -moz-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    width: 100%;
+    margin: 0 auto;
+  }
+}
+
+.hero-image {
+  position: absolute;
+  right: -6%;
+  width: 103%;
+  height: 130%;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.hero-image::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  background: linear-gradient(to right, rgba(16, 25, 38, 1) 25%, rgba(16, 25, 38, 0.93) 40%, rgba(16, 25, 38, 0.63) 50%,  rgba(245, 246, 252, 0) 60%), linear-gradient(to top, #101926 19%, rgba(16, 25, 38, 0.83) 22%, rgba(16, 25, 38, 0.63) 25%, rgba(245, 246, 252, 0) 32%);
+}
+
+.hero-image-container {
+  display: flex;
+  flex: 1 1 auto;
+  flex-direction: row;
+  -webkit-box-flex: 1;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  z-index: 1;
+  height: 0;
+  padding-bottom: 50%;
+}
+
+.hero-info-container {
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  flex-direction: column;
+  -webkit-box-pack: center;
+  justify-content: center;
+  width: 35%;
+  min-width: 500px;
+  max-width: 800px;
+  padding: 16px 32px 64px 0;
+  z-index: 2;
+  position: relative;
+}
+
+.info-details {
+  /** margin: 40px 0 22px 0; **/
+  margin-bottom: 22px;
+  color: white;
+
+  .description {
+    color: #d2d2d2;
+    font-size: 18px;
+    line-height: 26px;
+    font-weight: 300;
+  }
+}
+
+.info-details::after {
+  background: linear-gradient(to right, #171717 0%, rgba(23, 23, 23, 0.98) 20%, rgba(23, 23, 23, 0.97) 25%, rgba(23, 23, 23, 0.95) 35%, rgba(23, 23, 23, 0.94) 40%, rgba(23, 23, 23, 0.92) 45%, rgba(23, 23, 23, 0.9) 50%, rgba(23, 23, 23, 0.87) 55%, rgba(23, 23, 23, 0.82) 60%, rgba(23, 23, 23, 0.75) 65%, rgba(23, 23, 23, 0.63) 70%, rgba(23, 23, 23, 0.45) 75%, rgba(23, 23, 23, 0.27) 80%, rgba(23, 23, 23, 0.15) 85%, rgba(23, 23, 23, 0.08) 90%, rgba(23, 23, 23, 0.03) 95%, rgba(23, 23, 23, 0) 100%);
+}
