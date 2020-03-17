@@ -1,1 +1,24 @@
 /* You can add global styles to this file, and also import other style files */
+
+html, body { height: 100%; }
+body { margin: 0; font-family: 'Lato', sans-serif; }
+
+h1.title {
+  color: #f9f9f9;
+  font-size: 44px;
+  font-weight: 500;
+}
+
+button {
+  font-size: 16px;
+  padding: 8px 16px;
+  outline: none;
+  box-sizing: border-box;
+  position: relative;
+  display: inline-block;
+  white-space: nowrap;
+
+  &:hover {
+    cursor: pointer;
+  }
+}

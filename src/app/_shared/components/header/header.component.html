@@ -1,0 +1,21 @@
+<header class="app-header">
+  <div class="left-section">
+    <a class="mob-menu-icon" (click)="openSideMenu()">
+      <span class="fa fa-bars mob-side-menu-bars"></span>
+    </a>
+    <a class="header-logo" (click)="goToHome()">
+      <img src="assets/images/stanger-things_raw.png" />
+    </a>
+  </div>
+  
+  <div class="right-section">
+    <button class="seasons-btn" (click)="goToSeasons()">{{ 'viewSeasonsText' | translate }}</button>
+    <app-select [defaultValue]="selectedLang" [options]="langHeaderOptions" (changeOption)="changeLang($event)"></app-select>
+  </div>
+</header>
+
+<div class="sidenav" [ngClass]="{'sidenav-open': isSideNavOpen}">
+  <a (click)="closeSideMenu()" class="closebtn">&times;</a>
+  <button class="seasons-btn margin-bottom-16" (click)="goToSeasons()">{{ 'viewSeasonsText' | translate }}</button>
+  <app-select [hasBorder]="false" [defaultValue]="selectedLang" [options]="langHeaderOptions" (changeOption)="changeLang($event)"></app-select>
+</div>

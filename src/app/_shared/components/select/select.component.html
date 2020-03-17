@@ -1,0 +1,6 @@
+<div class="select">
+  <select [(ngModel)]="defaultValue" (ngModelChange)="onValueChange($event)" [ngClass]="{'border-select': hasBorder}">
+    <option *ngFor="let option of options" [ngValue]="option.value">{{option.text}}</option>
+  </select>
+  <div class="select__arrow"></div>
+</div>

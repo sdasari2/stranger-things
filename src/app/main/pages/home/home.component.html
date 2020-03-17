@@ -1,0 +1,54 @@
+<app-header></app-header>
+
+<section class="hero-section">
+  <div class="hero-container">
+    <div class="hero-info-container">
+      <div class="info-details">
+        <img class="mobile-img" [src]="displayImage" />
+        <h1 class="title">{{ 'heading' | translate }}</h1>
+        <p class="description">{{ 'description' | translate }}</p>
+        <button class="trailer-play-btn" (click)="onTrailerClick()">
+          <span class="fa fa-play-circle play-icon"></span>
+          <span class="play-text">{{ 'watchTrailerText' | translate }}</span>
+        </button>
+      </div>
+    </div>
+    <div class="hero-image-container">
+      <div class="hero-image" [ngStyle]="{'background-image': 'url(' + displayImage + ')'}"></div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="top-bottom-border quote-block">
+    <p>{{ 'quote.text' | translate }}</p>
+    <p class="author-name">- {{ 'quote.author' | translate }}</p>
+  </div>
+</section>
+
+<section>
+  <h1 class="title">Gallery</h1>
+
+  <div class="gallery-container">
+    <div class="gallery" *ngFor="let gallery of galleryList;">
+      <a target="_blank" [href]="gallery.src">
+        <img class="gallery-image" [src]="gallery.src" alt="Cinque Terre">
+      </a>
+      <div class="gallery-desc">{{ gallery.text }}</div>
+    </div>
+  </div>
+</section>
+
+<div id="myModal" class="modal" [ngClass]="{'display-block': openModal}">
+  <div class="modal-content">
+    <div class="modal-header">
+      <span class="close" (click)="closeModal()">&times;</span>
+    </div>
+    <div class="modal-body">
+      <div class="videoWrapper">
+        <div></div>
+        <iframe #videoIframe width="560" height="349" [src]="safeVideoUrl" frameborder="0" allowfullscreen></iframe>
+      </div>
+    </div>
+  </div>
+</div>
